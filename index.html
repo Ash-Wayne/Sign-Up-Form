@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+    <div class="left-div">
+        <div>
+            <img src="./img/4100751.png" alt="logo">
+            <p>WRITE</p>
+        </div>
+    </div>
+    <div class="right-div">
+        <p class="copy">If you want to learn to write like Hemingway, then this is the way! <br> Do you want to know the way? Sign up now to find out! <br><br> You <em>know</em> you know want to.</p>
+        <form action="" id="sign-up-form">
+            <h2>Let's do this!</h2>
+            <div>
+                <div>
+                    <label for="first-name">FIRST NAME<input type="text" id="first-name" name="first_name" required tabindex="1">
+                        <span></span></label>
+                    <label for="email">EMAIL<input type="email" id="email" name="email" required tabindex="3">
+                        <span></span></label>
+                    <label for="password">PASSWORD<input type="password" id="password" name="password" 
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?=.{8,15}).*$" required tabindex="5">
+                        <span></span></label>
+                </div>
+                <div>
+                    <label for="last-name">LAST NAME<input type="text" id="last-name" name="last_name" tabindex="2"></label>
+                    <label for="phone">PHONE NUMBER<input type="tel" id="phone" name="phone" 
+                        pattern="^(?:\d{3}[\-]?\d{3}[\-]?\d{4}|(?:\d{1}\s?\(\d{3}\)\s?\d{3}[\-]?\d{4}))$" tabindex="4">
+                        <span></span></label>
+                    <label for="confirm-password">CONFIRM PASSWORD<input type="password" id="confirm-password" 
+                        name="confirm_password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?=.{8,15}).*$" required tabindex="6">
+                        <span></span></label>
+                </div>
+                <div class="password-checks-div">
+                    <div class="password-errors-div">
+                        <p class="capital-letter-rule">Password must have a capital letter</p>
+                        <p class="small-letter-rule">Password must have a small letter</p>
+                        <p class="number-rule">Password must have a number</p>
+                        <p class="special-character-rule">Password must have a special character</p>
+                        <p class="length-rule">Password length must be between 8-15 characters</p>
+                    </div>
+                    <p class="password-match-errors"></p>
+                </div>
+            </div>
+        </form>
+        <button form="sign-up-form" tabindex="7">Create Account</button>
+        <p>Already have an account? <a href="#a" tabindex="8">Log in</a></p>
+    </div>
+</body>
+</html>

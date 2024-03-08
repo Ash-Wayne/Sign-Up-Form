@@ -1,0 +1,184 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Norse;
+    src: url(Norse-Bold.otf);
+}
+
+:root {
+    font-size: 2vh;
+    --right-div-left-padding: 6rem;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-div {
+    width: 35%;
+    background-image: url("./img/halie-west-OYRGy70RT2g-unsplash.jpg");
+}
+
+.right-div {
+    width: 75%;
+    background-color: #F2F2F2;
+}
+
+.left-div div {
+    display: flex;
+    background-color: rgb(0,0,0,.25);
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.left-div img {
+    width: 9rem;
+    height: 9rem;
+}
+
+.left-div p {
+    font-size: 7rem;
+    font-family: Norse;
+    align-self: center;
+}
+
+.right-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+}
+
+.copy, form h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 75%;
+    line-height: 1.3em;
+}
+
+em {
+    font-style: italic;
+}
+
+.copy, button, form ~ p {
+    margin-left: var(--right-div-left-padding);
+}
+
+form {
+    background-color: white;
+    padding: 1.5rem 0px 2rem var(--right-div-left-padding);
+    box-shadow: 0px 4px 5px rgb(128, 128, 128, .3), 0px 0px 5px rgb(128, 128, 128, .3);
+}
+
+button {
+    font-size: 1rem;
+    font-weight: bold;
+    width: 18%;
+    padding: .8em 0px;
+    border-radius: .4em;
+    background-color: #C26D3B;
+    color: white;
+    box-shadow: 1px 1px 1px black;
+    cursor: pointer;
+}
+
+h2 + div {
+    display: flex;
+    gap: 10%;
+}
+
+label {
+    margin-top: 1.8rem;
+    font-size: .9rem;
+    text-shadow: 0px 0px .8px rgb(128, 128, 128);
+    letter-spacing: 1px;
+    position: relative;
+}
+
+input {
+    font-size: 1rem;
+    margin-top: .2rem;
+    border: 1px solid rgb(128, 128, 128, .3);
+    border-radius: .2em;
+}
+
+input, label {
+    display: block;
+}
+
+a:link {
+    color: #C26D3B;
+}
+
+a:visited {
+    color: purple;
+}
+
+input:focus {
+    outline: 0px;
+    border-color: blue;
+    box-shadow: 2px 2px 4px rgb(128, 128, 128, .3);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+button + p {
+    margin-top: -1em;
+}
+
+span {
+    position: absolute;
+}
+
+:user-invalid {
+    border-color: red;
+}
+
+:is(#first-name:user-invalid, #email:user-invalid, #phone:user-invalid, #password:user-invalid, #confirm-password:user-invalid) + span::before {
+    color: red; 
+    font-size: .8rem;
+}
+
+#first-name:user-invalid + span::before {
+    content: "Please enter your first name";
+}
+
+#email:user-invalid + span::before {
+    content: "Please enter a valid email";
+}
+
+#phone:user-invalid + span::before {
+    content: "Please enter a valid phone number";
+}
+
+#password:user-invalid + span::before {
+    content: "Please enter a valid password";
+}
+
+#confirm-password:user-invalid + span::before {
+    content: "Please enter a valid password";
+}
+
+.password-checks-div {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.password-errors-div {
+    visibility: hidden;
+    margin-top: 5em;
+    margin-left: -5em;
+}
+
+.password-match-errors {
+    color: red;
+    margin-left: -5em;
+}
+
